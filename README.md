@@ -1,43 +1,50 @@
 # Cinema App
 
-A desktop cinema management application using Python, Tkinter, and MySQL. Supports admin/worker roles, movie upload (with poster), and ticket selling.
+A modern, user-friendly cinema management system built with Python and Tkinter.
 
 ## Features
 
-- User authentication (admin, worker, user)
-- Admin: Add/delete/view movies (with poster upload)
-- Worker: Sell tickets, seat validation
-- Passwords stored securely (SHA-256)
+- **Role-based Dashboards:** Separate dashboards for Admin, Worker, and User roles.
+- **User Authentication:** Secure login, signup, and password hashing.
+- **Password Reset/Change:** Users can reset forgotten passwords and change their password after login.
+- **Movie Management:** Admins can add, edit, delete, and search/filter movies. Poster upload supported.
+- **Ticket Management:** Users and workers can book tickets. Users can view and cancel their own tickets.
+- **User Management:** Admins can view, edit, and delete users.
+- **Analytics:** Admins can view statistics (total users, movies, tickets sold, revenue).
+- **Movie Search/Filter:** Users and admins can search/filter movies by title or date.
+- **Help Menu:** Built-in help/about dialog for user guidance.
+- **Input Validation & Tooltips:** Improved error messages and user guidance throughout.
 
 ## Setup
 
-1. Install MySQL and create a database named `cinema_db`.
-2. Update `db.py` with your MySQL credentials if needed.
-3. Install dependencies:
+1. **Install Requirements:**
    ```bash
    pip install -r requirements.txt
    ```
-4. Run the app:
+2. **Database:**
+   - MySQL server must be running on `localhost` with user `root` and password `root` (edit `db.py` if needed).
+   - The app will auto-create the `cinema_db` database and tables on first run.
+3. **Run the App:**
    ```bash
    python main.py
    ```
 
-## Usage
+## User Roles
 
-- Admins can add/delete/view movies and upload posters.
-- Workers can sell tickets and validate seat numbers.
+- **Admin:** Full access to all features, including user and movie management, analytics.
+- **Worker:** Can sell tickets and view movies/seats.
+- **User:** Can book/cancel tickets, view movies, and change their password.
 
-## File Structure
+## Default Test Users
 
-- `main.py` - App entry point
-- `login.py`, `signup.py` - Auth system
-- `dashboard_admin.py`, `dashboard_worker.py` - Role dashboards
-- `movie_manager.py` - Movie CRUD
-- `ticket_seller.py` - Ticket selling
-- `db.py` - Database connection and setup
-- `utils.py` - Password hashing
+- **Admin:** `admin` / `admin123`
+- **Worker:** `worker` / `worker123`
+- **User:** `user` / `user123`
 
----
+## Screenshots
 
-_Built with Python, Tkinter, and MySQL._
-# Cinema_Python
+_Add your screenshots here_
+
+## License
+
+MIT
